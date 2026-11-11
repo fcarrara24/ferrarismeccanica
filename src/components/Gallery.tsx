@@ -84,6 +84,7 @@ export const Gallery: React.FC = () => {
               <img
                 src={GALLERY_IMAGES[carouselIndex].src}
                 alt={GALLERY_IMAGES[carouselIndex].title}
+                loading="lazy"
                 className="w-full h-full object-cover object-center cursor-pointer transform group-hover:scale-105 transition-transform duration-500"
                 onClick={() => openLightbox(carouselIndex)}
               />
@@ -137,7 +138,7 @@ export const Gallery: React.FC = () => {
                     carouselIndex === idx ? 'border-red-500 scale-110' : 'border-slate-800 opacity-50 hover:opacity-100'
                   }`}
                 >
-                  <img src={img.src} alt={img.title} className="w-full h-full object-cover" />
+                  <img src={img.src} alt={img.title} loading="lazy" className="w-full h-full object-cover" />
                 </button>
               ))}
             </div>
@@ -156,6 +157,7 @@ export const Gallery: React.FC = () => {
                 <img
                   src={img.src}
                   alt={img.title}
+                  loading="lazy"
                   className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>

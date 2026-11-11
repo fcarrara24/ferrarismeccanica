@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, Award, ShieldCheck, Clock, Settings2, Cpu } from 'lucide-react';
 import { COMPANY_INFO } from '../data/companyData';
+import { IndustrialIcon } from './IndustrialIcon';
 
 interface HeroProps {
   onNavigate: (sectionId: string) => void;
@@ -97,47 +98,9 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           {/* Right Column: Visual Machinery/Product Card Showcase */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              
-              {/* Outer decorative ring */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-amber-500 rounded-2xl blur-xl opacity-30"></div>
-              
-              <div className="relative rounded-2xl bg-slate-900 border border-slate-700 overflow-hidden shadow-2xl">
-                <div className="relative h-80 sm:h-96 w-full bg-slate-950 overflow-hidden">
-                  <img 
-                    src="gallery/20171219_081509.jpg" 
-                    alt="Lavorazione Meccanica Ferraris" 
-                    className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
-                    onError={(e) => {
-                      // Fallback image handling
-                      (e.target as HTMLImageElement).src = 'gallery/20171027_150628.jpg';
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-                  
-                  <div className="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md p-4 rounded-xl border border-slate-700/80 shadow-lg">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <span className="text-xs font-semibold text-red-400 uppercase tracking-wider block">Lavorazione Specifica</span>
-                        <h4 className="text-white font-bold text-base">Corpo Valvola Oil & Gas</h4>
-                      </div>
-                      <span className="px-2.5 py-1 rounded bg-red-600/20 text-red-300 text-xs font-mono font-bold border border-red-500/30">
-                        Alta Precisione
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="p-4 bg-slate-900 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
-                  <span>Stabilimento: Pradalunga (BG)</span>
-                  <button 
-                    onClick={() => onNavigate('galleria')} 
-                    className="text-red-400 font-semibold hover:underline flex items-center gap-1"
-                  >
-                    Vedi tutte le 20 foto &rarr;
-                  </button>
-                </div>
+              <div className="relative rounded-2xl bg-slate-900/50 border border-slate-800 p-8 flex items-center justify-center">
+                 <IndustrialIcon />
               </div>
-
             </div>
           </div>
 
