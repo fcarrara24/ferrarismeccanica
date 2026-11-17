@@ -5,6 +5,7 @@ interface LightboxModalProps {
   isOpen: boolean;
   imageSrc: string;
   imageTitle: string;
+  imageDescription: string;
   currentIndex: number;
   totalCount: number;
   onClose: () => void;
@@ -16,6 +17,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
   isOpen,
   imageSrc,
   imageTitle,
+  imageDescription,
   currentIndex,
   totalCount,
   onClose,
@@ -63,7 +65,8 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
         {/* Caption Bar */}
         <div className="mt-4 text-center">
           <h4 className="text-white font-bold text-lg sm:text-xl">{imageTitle}</h4>
-          <p className="text-slate-400 text-xs mt-1 font-mono">
+          <p className="text-slate-300 text-sm mt-2">{imageDescription}</p>
+          <p className="text-slate-500 text-xs mt-3 font-mono">
             Immagine {currentIndex + 1} di {totalCount} • Ferraris Meccanica
           </p>
         </div>

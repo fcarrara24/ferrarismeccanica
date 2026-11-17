@@ -17,10 +17,10 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Left Column: Text & CTAs */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            
+
             {/* Tagline Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs sm:text-sm font-semibold tracking-wide">
               <Award className="w-4 h-4 text-red-500" />
@@ -29,12 +29,12 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-              Lavorazioni Meccaniche di <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-amber-400">Alta Precisione</span>
+              Ferraris Meccanica lavorazioni di <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-amber-400">Alta Precisione</span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-lg sm:text-xl text-slate-300 max-w-2xl font-light leading-relaxed">
-              Oltre <strong className="text-white font-semibold">25 anni di esperienza</strong> al servizio dell'industria <strong className="text-white font-semibold">Oil & Gas</strong>. 
+              Oltre <strong className="text-white font-semibold">25 anni di esperienza</strong> al servizio dell'industria <strong className="text-white font-semibold">Oil & Gas</strong>.
               Dalla prototipazione alla produzione di grandi serie programmate, garantiamo massima affidabilità e rispetto rigoroso dei tempi.
             </p>
 
@@ -67,7 +67,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                 <span>Richiedi un Preventivo</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              
+
               <button
                 onClick={() => onNavigate('parco-macchine')}
                 className="w-full sm:w-auto px-6 py-4 rounded-xl text-base font-medium text-slate-200 bg-slate-900 hover:bg-slate-800 border border-slate-700 transition-all flex items-center justify-center gap-2"
@@ -99,7 +99,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="relative rounded-2xl bg-slate-900/50 border border-slate-800 p-8 flex items-center justify-center">
-                 <IndustrialIcon />
+                <IndustrialIcon />
               </div>
             </div>
           </div>
