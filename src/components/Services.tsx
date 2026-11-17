@@ -41,10 +41,10 @@ export const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 group-hover:scale-105 transition-transform">
+                  <div className="p-4 rounded-xl bg-slate-950 border border-slate-700 group-hover:scale-105 transition-transform">
                     {getIcon(service.iconName)}
                   </div>
-                  <span className="text-xs font-mono font-bold text-slate-500 uppercase tracking-wider">
+                  <span className="text-xs font-mono font-bold text-slate-300 uppercase tracking-wider">
                     {service.id.replace('-', ' ')}
                   </span>
                 </div>
@@ -53,15 +53,15 @@ export const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
                   {service.title}
                 </h4>
 
-                <p className="text-slate-300 text-sm leading-relaxed mb-6">
+                <p className="text-slate-200 text-sm leading-relaxed mb-6">
                   {service.fullDesc}
                 </p>
 
                 {/* Key Features List */}
-                <div className="space-y-2 mb-8 bg-slate-950/60 p-4 rounded-xl border border-slate-800/80">
-                  <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Caratteristiche Principali:</div>
+                <div className="space-y-2 mb-8 bg-slate-950/80 p-4 rounded-xl border border-slate-700/80">
+                  <div className="text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">Caratteristiche Principali:</div>
                   {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-start gap-2 text-xs text-slate-300">
+                    <div key={idx} className="flex items-start gap-2 text-xs text-slate-100">
                       <Check className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </div>
@@ -69,8 +69,8 @@ export const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-slate-800 flex items-center justify-between">
-                <span className="text-xs text-slate-400">Garanzia di Conformità 100%</span>
+              <div className="pt-4 border-t border-slate-700 flex items-center justify-between">
+                <span className="text-xs text-slate-300">Garanzia di Conformità 100%</span>
                 <button
                   onClick={() => onNavigate('contatti')}
                   className="text-xs font-bold text-red-400 hover:text-red-300 flex items-center gap-1 group/btn"

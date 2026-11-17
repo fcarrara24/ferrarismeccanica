@@ -17,6 +17,7 @@ export const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Sending email to:", "francescocarrara298@gmail.com", formData);
     // Simulate contact form submission
     setSubmitted(true);
   };
@@ -217,13 +218,14 @@ export const Contact: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                    <label htmlFor="service" className="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">
                       Tipo di Lavorazione d'Interesse
                     </label>
                     <select
+                      id="service"
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-500 transition-colors"
+                      className="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-500 transition-colors"
                     >
                       <option value="Tornitura">Tornitura Meccanica (fino Ø 650 mm)</option>
                       <option value="Centri di Lavoro">Centro di Lavoro Orizzontale Multi-Pallet (10 Tavole)</option>

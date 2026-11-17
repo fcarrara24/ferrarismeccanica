@@ -47,7 +47,7 @@ export const Gallery: React.FC = () => {
             Esempi di Componenti & Particolari Meccanici
           </h3>
           <p className="mt-4 text-slate-400 text-base sm:text-lg">
-            Una selezione di 20 lavorazioni rappresentative della nostra produzione per settori ad alta precisione.
+            Una rassegna di 20 lavorazioni meccaniche rappresentative della nostra produzione: componenti complessi per i settori Oil & Gas, valvolame di precisione e particolari torniti e fresati su disegno.
           </p>
 
           {/* View Mode Toggle */}
@@ -100,7 +100,10 @@ export const Gallery: React.FC = () => {
                   <h4 className="text-xl sm:text-2xl font-bold text-white mt-1">
                     {GALLERY_IMAGES[carouselIndex].title}
                   </h4>
-                </div>
+                  <p className="text-sm text-slate-300 mt-1 line-clamp-2">
+                    {GALLERY_IMAGES[carouselIndex].description}
+                  </p>
+                  </div>
                 <button
                   onClick={() => openLightbox(carouselIndex)}
                   className="p-3 rounded-xl bg-slate-900/90 text-white hover:bg-red-600 border border-slate-700 transition-colors flex items-center gap-2 text-xs font-semibold"
@@ -129,7 +132,7 @@ export const Gallery: React.FC = () => {
             </div>
 
             {/* Thumbnail Indicators */}
-            <div className="mt-6 flex justify-center items-center gap-2 overflow-x-auto py-2">
+            <div className="mt-6 flex justify-center items-center gap-2 overflow-x-auto py-2 w-full max-w-full">
               {GALLERY_IMAGES.map((img, idx) => (
                 <button
                   key={img.id}
@@ -179,6 +182,7 @@ export const Gallery: React.FC = () => {
             isOpen={lightboxIndex !== null}
             imageSrc={GALLERY_IMAGES[lightboxIndex].src}
             imageTitle={GALLERY_IMAGES[lightboxIndex].title}
+            imageDescription={GALLERY_IMAGES[lightboxIndex].description}
             currentIndex={lightboxIndex}
             totalCount={GALLERY_IMAGES.length}
             onClose={closeLightbox}

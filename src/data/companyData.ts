@@ -26,7 +26,8 @@ export const COMPANY_INFO = {
   city: "Pradalunga",
   province: "Bergamo",
   country: "Italia",
-  email: "ferraris.pa@tiscali.it",
+  email: "info@ferrarismeccanica.com",
+  website: "https://ferrarismeccanica.com",
   phone: "327 2061798",
   owner: "Paolo Ferraris",
   mapsUrl: "https://maps.google.com/?q=Via+Gritti+11+Pradalunga+Bergamo"
@@ -136,25 +137,29 @@ export const MACHINERY: Machine[] = [
   }
 ];
 
-export const GALLERY_IMAGES = [
-  { id: 1, src: "gallery/20171027_150628.jpg", title: "Lavorazione Meccanica di Precisione" },
-  { id: 2, src: "gallery/20171214_221623.jpg", title: "Componente Industriale Tornito" },
-  { id: 3, src: "gallery/20171214_221626.jpg", title: "Particolare Meccanico Oil & Gas" },
-  { id: 4, src: "gallery/20171214_224948.jpg", title: "Flangia di Alta Precisione" },
-  { id: 5, src: "gallery/20171214_224950.jpg", title: "Lavorazione su Centro di Lavoro" },
-  { id: 6, src: "gallery/20171214_232632.jpg", title: "Particolare Meccanico Complesso" },
-  { id: 7, src: "gallery/20171214_232636.jpg", title: "Finitura Superficiale di Precisione" },
-  { id: 8, src: "gallery/20171219_081502.jpg", title: "Componente Valvola Meccanica" },
-  { id: 9, src: "gallery/20171219_081509.jpg", title: "Corpo Valvola Oil & Gas" },
-  { id: 10, src: "gallery/20171219_081512.jpg", title: "Lavorazione Speciale Inox" },
-  { id: 11, src: "gallery/20180105_064311.jpg", title: "Particolare Tornito ad Alta Tolleranza" },
-  { id: 12, src: "gallery/20180105_064313.jpg", title: "Dettaglio Foratura e Barenatura" },
-  { id: 13, src: "gallery/20180105_064323.jpg", title: "Gruppo Meccanico Assemblato" },
-  { id: 14, src: "gallery/20180105_064331.jpg", title: "Superfici Rettificate e Collaudate" },
-  { id: 15, src: "gallery/20180105_064333.jpg", title: "Componente di Grande Diametro" },
-  { id: 16, src: "gallery/20180105_064506.jpg", title: "Barenatura di Precisione" },
-  { id: 17, src: "gallery/20180105_064509.jpg", title: "Controllo Dimensionale al Banco" },
-  { id: 18, src: "gallery/20180105_064512.jpg", title: "Particolare per Attuatore Idraulico" },
-  { id: 19, src: "gallery/20180105_064516.jpg", title: "Fornitura Completa su Disegno" },
-  { id: 20, src: "gallery/20180105_064521.jpg", title: "Lotto di Produzione Programma" }
+export interface GalleryImage {
+  id: number;
+  src: string;
+  title: string;
+  description: string;
+}
+
+export const GALLERY_IMAGES: GalleryImage[] = [
+  { id: 1, src: "gallery/20171027_150628.png", title: "Lavorazione Meccanica di Precisione", description: "Operazione di tornitura su componente in acciaio inossidabile per applicazioni meccaniche di precisione." },
+  { id: 2, src: "gallery/20171214_221623.png", title: "Componente Industriale Tornito", description: "Particolare meccanico tornito, rifinito con tolleranze ristrette per componenti di trasmissione." },
+  { id: 3, src: "gallery/20171214_232632.png", title: "Particolare Meccanico Oil & Gas", description: "Componente critico destinato al settore Oil & Gas, lavorato su tornio CNC." },
+  { id: 4, src: "gallery/20171219_081502.png", title: "Flangia di Alta Precisione", description: "Flangia di tenuta ad alte prestazioni, lavorata per garantire massima tenuta in condizioni gravose." },
+  { id: 5, src: "gallery/20171219_081509.png", title: "Lavorazione su Centro di Lavoro", description: "Fase di fresatura su centro di lavoro multi-pallet, con focus sulla precisione delle geometrie interne." },
+  { id: 6, src: "gallery/20180105_064311.png", title: "Particolare Meccanico Complesso", description: "Componente con geometria complessa, ottenuto mediante fresatura multiasse per applicazioni speciali." },
+  { id: 7, src: "gallery/20180105_064534.png", title: "Finitura Superficiale di Precisione", description: "Dettaglio della finitura superficiale su componente meccanico, conforme ai requisiti di rugosità richiesti." },
+  { id: 8, src: "gallery/20181009_203431.png", title: "Componente Valvola Meccanica", description: "Parte integrante di un sistema valvolare, lavorata per accoppiamenti di alta precisione." },
+  { id: 9, src: "gallery/20200116_221625.png", title: "Corpo Valvola Oil & Gas", description: "Corpo valvola realizzato per il settore petrolifero, sottoposto a rigorosi controlli dimensionali." },
+  { id: 10, src: "gallery/20200721_001944.png", title: "Lavorazione Speciale Inox", description: "Lavorazione di tornitura su lega Inconel, dimostrazione della capacità di gestire materiali ad alta resistenza." },
+  { id: 11, src: "gallery/20201010_161904.png", title: "Particolare Tornito ad Alta Tolleranza", description: "Componente meccanico con tolleranze centesimali, pronto per la fase di montaggio." },
+  { id: 12, src: "gallery/20201023_112329.png", title: "Dettaglio Foratura e Barenatura", description: "Dettaglio tecnico su operazione di barenatura interna per alloggiamento cuscinetti." },
+  { id: 13, src: "gallery/20210114_100615.png", title: "Gruppo Meccanico Assemblato", description: "Esempio di assemblaggio meccanico di alta precisione, testato per funzionalità operativa." },
+  { id: 14, src: "gallery/20210307_113715.png", title: "Superfici Rettificate e Collaudate", description: "Componente con superfici rettificate, garantito da rigoroso controllo metrologico." },
+  { id: 15, src: "gallery/IMG-20190208-WA0009.png", title: "Componente di Grande Diametro", description: "Lavorazione di un componente di grandi dimensioni con precisione centesimale." },
+  { id: 16, src: "gallery/IMG-20190731-WA0012.png", title: "Barenatura di Precisione", description: "Dettaglio della fase di barenatura per garantire allineamenti geometrici perfetti." },
+  { id: 17, src: "gallery/IMG-20210218-WA0004.png", title: "Controllo Dimensionale al Banco", description: "Operazione di controllo qualità su banco metrologico con strumentazione certificata." }
 ];
