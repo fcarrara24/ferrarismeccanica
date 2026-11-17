@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit -p tsconfig.app.json",
-    "deploy": "npm run build && gh-pages -d dist --dotfiles"
+    "deploy": "npm run build && gh-pages -d dist --dotfiles -b main && gh-pages -d dist --dotfiles -b develop"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
